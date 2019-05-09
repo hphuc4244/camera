@@ -8,7 +8,7 @@ $img = str_replace('data:image/png;base64,', '', $img);
 $img = str_replace(' ', '+', $img);
 $fileData = base64_decode($img); 
 $str='("User.'.$id.'.'.$stt.'",'.$id.",".$stt.")";
-$con = mysqli_connect('localhost','root','123456','qlkhuonmat');
+$con = new mysqli('localhost','root','123456','qlkhuonmat');
 $sql = "INSERT INTO hinh(TenAnh,MaTaiKhoan,STT) values".$str;
 $result = $con->query($sql);
 
