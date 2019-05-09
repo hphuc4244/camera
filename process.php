@@ -1,6 +1,6 @@
 <?php
 
-	$con = mysqli_connect('localhost','root','123456','qlkhuonmat');
+	@$con = mysqli_connect('localhost','root','123456','qlkhuonmat');
 	session_start();
 	if (isset($_POST['login']))
 	{
