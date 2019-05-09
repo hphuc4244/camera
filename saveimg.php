@@ -1,5 +1,4 @@
 <?php
-// Gán dữ liệu nhân được và $img
 $img = $_POST['imgBase64'];
 $id = $_POST['maso'];
 $stt =  $_POST['stt'];
@@ -14,5 +13,4 @@ $result = $con->query($sql);
 $fileName = '/home/hoangphuc/ftp/files/camera/imgs/'.$id.'/'.'User.'. $id .'.'.$stt.'.png'; 
  
 file_put_contents($fileName, $fileData); 
- 
 ?>
