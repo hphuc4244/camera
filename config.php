@@ -1,4 +1,4 @@
 <?php
    
-   $con = mysqli_connect('localhost','root','123456','qlkhuonmat');
+   $con = new mysqli('localhost','root','123456','qlkhuonmat');
 ?>
