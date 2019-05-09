@@ -1,6 +1,5 @@
 <?php
   $con = new mysqli('localhost','root','123456','qlkhuonmat'); 
-
   $sql    = "select MaSo from nguoidangky";
   $result = $con->query($sql);
   $rows = array();

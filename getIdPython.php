@@ -1,7 +1,7 @@
 <?php
     $json = $_POST['cmd'];
 	 $con = new mysqli('localhost','root','123456','qlkhuonmat');
-   mysqli_set_charset( $conn, 'utf8'); 
+   mysqli_set_charset( $con, 'utf8'); 
    $sql = "select * from nguoidangky where MaSo = ".$json;
   
  $result = $con->query($sql);
