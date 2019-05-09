@@ -352,37 +352,42 @@ input[type=password]:placeholder {
 
       v.srcObject = stream;
     }
-   
+    function videoError (e){
+      alert('Rất tiếc đã xảy ra lỗi, có thể do trình duyệt của bạn không hỗ trợ chức năng này hoặc trang này chưa kết nối riêng tư https.');
+    }
     
-    //  document.getElementById('capture').addEventListener('click', function ()
-    //   {
+     document.getElementById('capture').addEventListener('click', function ()
+      {
                 
-    //     var data =[];
-    //     var maso = <?php echo $_SESSION['User']; ?>;
+        var data =[];
+        var maso = <?php echo $_SESSION['User']; ?>;
        
         
-    //     for (var i = 0; i <= 79; i++) {
-    //        context.drawImage(v, 0, 0, 400, 300);
-    //           console.log(i);
-    //           if (i==79)
-    //           {
-    //             alert("Đăng kí thành công !");     
-    //           }
+        for (var i = 0; i <= 79; i++) {
+           context.drawImage(v, 0, 0, 400, 300);
+              console.log(i);
+              if (i==79)
+              {
+                alert("Đăng kí thành công !");     
+              }
             
-    //        data = canvas.toDataURL(); 
-    //         $.ajax({
-    //             type: "POST",
-    //             url: "saveimg.php",
-    //             data: {
-    //                 maso: maso,
-    //                 stt: i,
-    //                 imgBase64: data 
-    //             }
+           data = canvas.toDataURL(); 
+            $.ajax({
+                type: "POST",
+                url: "saveimg.php",
+                data: {
+                    maso: maso,
+                    stt: i,
+                    imgBase64: data 
+                }
                 
-    //         })
+            })
             
-    //     } 
-    // });
+        }
+       
+
+        
+    });
   </script>
 </body>
 </html>
