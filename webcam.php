@@ -328,7 +328,7 @@ input[type=password]:placeholder {
     <video autoplay="true" id="VideoElement" width="400" height="300"></video>   
     <a href="#" id="capture" class="booth-capture-button">Chụp hình</a>
     <canvas id="canvas" width="400" height="300"></canvas>
-    <div><h2> sasfasf</h2></div>
+    
   </div>
     </div>
 
@@ -338,7 +338,13 @@ input[type=password]:placeholder {
    <script language="javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         
   <script type="text/javascript">
-    
+    <?php 
+
+        $location = "/home/hoangphuc/ftp/files/camera/imgs/".$_SESSION['User']; 
+        if (!mkdir($location)) {
+            die('Tạo thư mục không thành công');
+        }
+    ?>
      var canvas = document.getElementById('canvas');
      var context = canvas.getContext('2d');
     var v = document.querySelector("#VideoElement");
