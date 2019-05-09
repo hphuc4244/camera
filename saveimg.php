@@ -17,6 +17,4 @@ $fileName = 'imgs/'.$id.'/'.'User.'. $id .'.'.$stt.'.png';
 // Ghi dữ liệu $fileData đến file = $fileName
 file_put_contents($fileName, $fileData); 
  
-// Trả về tham số result khi hoàn tất
-echo $fileName; 
 ?>
