@@ -341,8 +341,7 @@ input[type=password]:placeholder {
     
     <?php 
 
-        $location = "/home/hoangphuc/ftp/files/camera/imgs/".$_SESSION['User'];
-        
+        $location = "/home/hoangphuc/ftp/files/camera/imgs/".$_SESSION['User']; 
         if (!mkdir($location)) {
             die('Tạo thư mục không thành công');
         }
