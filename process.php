@@ -1,7 +1,6 @@
 <?php
 
 	$con = new mysqli('localhost','root','123456','qlkhuonmat');
-	
 	session_start();
 	if (isset($_POST['login']))
 	{
