@@ -337,15 +337,9 @@ input[type=password]:placeholder {
  
    <script language="javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         
-<!--   <script type="text/javascript">
+  <script type="text/javascript">
     
-    <?php 
-
-        $location = "/home/hoangphuc/ftp/files/camera/imgs/".$_SESSION['User']; 
-        if (!mkdir($location)) {
-            die('Tạo thư mục không thành công');
-        }
-    ?>;
+    
      var canvas = document.getElementById('canvas');
      var context = canvas.getContext('2d');
     var v = document.querySelector("#VideoElement");
@@ -358,43 +352,38 @@ input[type=password]:placeholder {
 
       v.srcObject = stream;
     }
-    function videoError (e){
-
-    }
+   
     
-     document.getElementById('capture').addEventListener('click', function ()
-      {
+    //  document.getElementById('capture').addEventListener('click', function ()
+    //   {
                 
-        var data =[];
-        var maso = <?php echo $_SESSION['User']; ?>;
+    //     var data =[];
+    //     var maso = <?php echo $_SESSION['User']; ?>;
        
         
-        for (var i = 0; i <= 79; i++) {
-           context.drawImage(v, 0, 0, 400, 300);
-              console.log(i);
-              if (i==79)
-              {
-                alert("Đăng kí thành công !");     
-              }
+    //     for (var i = 0; i <= 79; i++) {
+    //        context.drawImage(v, 0, 0, 400, 300);
+    //           console.log(i);
+    //           if (i==79)
+    //           {
+    //             alert("Đăng kí thành công !");     
+    //           }
             
-           data = canvas.toDataURL(); 
-            $.ajax({
-                type: "POST",
-                url: "saveimg.php",
-                data: {
-                    maso: maso,
-                    stt: i,
-                    imgBase64: data 
-                }
+    //        data = canvas.toDataURL(); 
+    //         $.ajax({
+    //             type: "POST",
+    //             url: "saveimg.php",
+    //             data: {
+    //                 maso: maso,
+    //                 stt: i,
+    //                 imgBase64: data 
+    //             }
                 
-            })
+    //         })
             
-        }
-       
-
-        
-    });
-  </script> -->
+    //     } 
+    // });
+  </script>
 </body>
 </html>
 
