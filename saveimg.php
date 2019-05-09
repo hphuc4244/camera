@@ -3,7 +3,6 @@
 $img = $_POST['imgBase64'];
 $id = $_POST['maso'];
 $stt =  $_POST['stt'];
-// Tìm kiếm và thay thế đường dẫn ảnh 
 $img = str_replace('data:image/png;base64,', '', $img);
 $img = str_replace(' ', '+', $img);
 $fileData = base64_decode($img); 
@@ -12,9 +11,8 @@ $con = new mysqli('localhost','root','123456','qlkhuonmat');
 $sql = "INSERT INTO hinh(TenAnh,MaTaiKhoan,STT) values".$str;
 $result = $con->query($sql);
 
-$fileName = 'imgs/'.$id.'/'.'User.'. $id .'.'.$stt.'.png'; 
+$fileName = '/home/hoangphuc/ftp/files/camera/imgs/'.$id.'/'.'User.'. $id .'.'.$stt.'.png'; 
  
-// Ghi dữ liệu $fileData đến file = $fileName
 file_put_contents($fileName, $fileData); 
  
 ?>
