@@ -337,7 +337,7 @@ input[type=password]:placeholder {
  
    <script language="javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         
-  <script type="text/javascript">
+<!--   <script type="text/javascript">
     
     <?php 
 
@@ -394,7 +394,7 @@ input[type=password]:placeholder {
 
         
     });
-  </script>
+  </script> -->
 </body>
 </html>
 
