@@ -1,6 +1,6 @@
 <?php
  
-  $json = json_decode($_GET['maso'],true);
+  $json = json_decode($_POST['maso'],true);
   	
  	$con = new mysqli('localhost','root','123456','qlkhuonmat');
 	 $rows = array();
