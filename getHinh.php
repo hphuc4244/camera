@@ -1,6 +1,6 @@
 <?php
  
-  $json = json_decode($_POST['maso'],true);
+  $json = json_decode($_GET['maso'],true);
   	
  	$con = new mysqli('localhost','root','123456','qlkhuonmat');
 	 $rows = array();
@@ -19,9 +19,6 @@
       	{
       		$rows[]=array('mssv' => $json[$i]["MaSo"], 'items' => $mssv);	
       	}
-      	
-
-
 	  }
 	  echo json_encode($rows);
 	  
