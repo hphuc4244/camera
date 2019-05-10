@@ -16,7 +16,7 @@
 			{
 				
 						$_SESSION['User']=$_POST['usr'];
-						header("location:http://ec2-18-188-71-150.us-east-2.compute.amazonaws.com/webcam.php");
+						header("location:webcam.php");
 					
 				
 			}
