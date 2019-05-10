@@ -9,8 +9,8 @@
 
 	
 	$router->map( 'GET', '/getImg/[*:mssv]/[*:id]', 'get.php', 'get');
-	$router->map( 'GET', '/getNguoiDangKy', 'getNguoiDangKy.php', 'getNguoiDangKy');
-	$router->map( 'GET', '/getHinh', 'getHinh.php', 'getHinh');
+	$router->map( 'POST', '/getNguoiDangKy', 'getNguoiDangKy.php', 'getNguoiDangKy');
+	$router->map( 'POST', '/getHinh', 'getHinh.php', 'getHinh');
 	$router->map( 'POST', '/upData', 'upData.php', 'upData');
 	$router->map( 'POST', '/getIdPython', 'getIdPython.php', 'getIdPython');
 	$match = $router->match();
