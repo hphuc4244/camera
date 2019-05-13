@@ -371,7 +371,7 @@ input[type=password]:placeholder {
         for (var i = 0; i <= 149; i++) {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
-              if (i==79)
+              if (i==149)
               {
                 alert("Đăng kí thành công !");     
               }
