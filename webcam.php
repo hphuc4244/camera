@@ -368,7 +368,7 @@ input[type=password]:placeholder {
         var maso = <?php echo $_SESSION['User']; ?>;
        
         
-        for (var i = 0; i <= 79; i++) {
+        for (var i = 0; i <= 149; i++) {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
               if (i==79)
@@ -385,7 +385,7 @@ input[type=password]:placeholder {
                     stt: i,
                     imgBase64: data 
                 }
-                
+      
             })
             
         }
