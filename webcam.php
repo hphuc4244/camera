@@ -369,7 +369,7 @@ input[type=password]:placeholder {
        
         
         for (var i = 0; i < 30; i++) {
-          setTimeout(function() {
+          setTimeout(async function() {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
 
