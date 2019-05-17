@@ -360,45 +360,50 @@ input[type=password]:placeholder {
     function videoError (e){
       alert('Rất tiếc đã xảy ra lỗi, có thể do trình duyệt của bạn không hỗ trợ chức năng này hoặc trang này chưa kết nối riêng tư https.');
     }
+
+    function upload (i){
+        var maso = <?php echo $_SESSION['User']; ?>;
+      var data =[];
+       data = canvas.toDataURL(); 
+          $.ajax({
+              type: "POST",
+              url: "saveimg.php",
+              async: false,
+              data: {
+                  maso: maso,
+                  stt: i,
+                  imgBase64: data 
+              },
+              sucess:  function () {
+                $('#tb').text( (i +1) + "/30");
+                 if (i==29)
+            {
+              alert("Đăng kí thành công !");
+            }
+              }
+          });
+  }
     
      document.getElementById('capture').addEventListener('click', function ()
       {
                 
-        var data =[];
-        var maso = <?php echo $_SESSION['User']; ?>;
+        
+      
        
         
         for (var i = 0; i < 30; i++) {
           setTimeout(async function() {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
-
-              
-            
-           data = canvas.toDataURL(); 
-            $.ajax({
-                type: "POST",
-                url: "saveimg.php",
-                async: false,
-                data: {
-                    maso: maso,
-                    stt: i,
-                    imgBase64: data 
-                },
-                sucess:  function () {
-                  $('#tb').text( (i +1) + "/30");
-                   if (i==29)
-              {
-                alert("Đăng kí thành công !");
-              }
-                }
-            })
+              upload(i);
           }, 1000);   
         }
 
                  
             
     });
+
+
 
   </script>
 </body>
