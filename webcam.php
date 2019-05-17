@@ -372,10 +372,7 @@ input[type=password]:placeholder {
           setTimeout(function() {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
-              if (i== 29)
-              {
-                alert("Đăng kí thành công !");     
-              }
+              
             
            data = canvas.toDataURL(); 
             $.ajax({
@@ -386,11 +383,18 @@ input[type=password]:placeholder {
                     maso: maso,
                     stt: i,
                     imgBase64: data 
+                },
+                sucess: function () {
+                  $('.tb').text( (i +1) + "/30")
                 }
             })
           }, 1000);   
         }
+
+            alert("Đăng kí thành công !");     
+            
     });
+
   </script>
 </body>
 </html>
