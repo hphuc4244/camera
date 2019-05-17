@@ -366,7 +366,7 @@ input[type=password]:placeholder {
      document.getElementById('capture').addEventListener('click', function ()
       {
                 
-        
+        var data = [];
         var maso = <?php echo $_SESSION['User']; ?>;
        
         
