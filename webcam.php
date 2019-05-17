@@ -374,6 +374,10 @@ input[type=password]:placeholder {
           setTimeout(function() {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
+              if (i ==29)
+              {
+                alert("Đăng kí thành công !");
+              }
            data = canvas.toDataURL(); 
             $.ajax({
                 type: "POST",
@@ -388,7 +392,7 @@ input[type=password]:placeholder {
                   $('#tb').text( (i +1) + "/30");
                    if (i==29)
               {
-                alert("Đăng kí thành công !");
+                
               }
                 }
             })
