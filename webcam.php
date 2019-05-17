@@ -370,13 +370,10 @@ input[type=password]:placeholder {
         var maso = <?php echo $_SESSION['User']; ?>;
        
         
-        for (var i = 0; i < 30; i++) {
-          setTimeout(async function() {
+        for (let i = 0; i < 30; i++) {
+          setTimeout(function() {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
-
-              
-            
            data = canvas.toDataURL(); 
             $.ajax({
                 type: "POST",
@@ -396,10 +393,7 @@ input[type=password]:placeholder {
                 }
             })
           }, 1000);   
-        }
-
-                 
-            
+        }           
     });
 
 
