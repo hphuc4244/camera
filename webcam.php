@@ -381,11 +381,18 @@ input[type=password]:placeholder {
             $.ajax({
                 type: "POST",
                 url: "saveimg.php",
-                async: false,
+               
                 data: {
                     maso: maso,
                     stt: i,
                     imgBase64: data 
+                },
+                sucess:  function () {
+                  $('#tb').text( (i +1) + "/30");
+                   if (i==29)
+              {
+                alert("Đăng kí thành công !");
+              }
                 }
             })
           }, 1000);   
