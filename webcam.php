@@ -380,6 +380,7 @@ input[type=password]:placeholder {
             $.ajax({
                 type: "POST",
                 url: "saveimg.php",
+                async: false,
                 data: {
                     maso: maso,
                     stt: i,
