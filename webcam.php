@@ -10,8 +10,8 @@
       echo "Welcome".$_SESSION['User'];
       echo '<a href="logout.php?logout">Logout</a>';
    }
-  
   ?>
+  <p id="tb"></p>
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Poppins');
 
@@ -368,10 +368,11 @@ input[type=password]:placeholder {
         var maso = <?php echo $_SESSION['User']; ?>;
        
         
-        for (var i = 0; i <= 149; i++) {
+        for (var i = 0; i < 30; i++) {
+          setTimeout(function() {
            context.drawImage(v, 0, 0, 400, 300);
               console.log(i);
-              if (i==149)
+              if (i== 29)
               {
                 alert("Đăng kí thành công !");     
               }
@@ -386,13 +387,9 @@ input[type=password]:placeholder {
                     stt: i,
                     imgBase64: data 
                 }
-      
             })
-            
+          }, 1000);   
         }
-       
-
-        
     });
   </script>
 </body>
