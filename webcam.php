@@ -315,13 +315,13 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
 
         var data = [];
         var maso = <?php echo $_SESSION['User']; ?>;
-       
+        document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... ";
         
         for (let i = 0; i < 30; i++) {
           setTimeout(function() {
            context.drawImage(v, 0, 0, 800, 500);
               console.log(i);
-              document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... ";
+              
               if (i ==29)
               {
                 alert("Đăng kí thành công !");
