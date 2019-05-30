@@ -63,7 +63,7 @@ h2 {
   background: #fff;
   padding: 30px;
   width: 90%;
-  max-width: 450px;
+  max-width: 800px;
   position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -324,10 +324,10 @@ input[type=password]:placeholder {
   <div id="formContent">
     <h2>Chuẩn bị đăng kí khuôn mặt</h2>
     <h2 style="color:red;display: none " id="loi" >Đã có ảnh</h2>
-    <div class="booth">
-    <video autoplay="true" id="VideoElement" width="400" height="300"></video>   
+    <div class="booth" style="margin: auto;">
+    <video autoplay="true" id="VideoElement" width="800" height="500"></video>   
     <a href="#" id="capture" class="booth-capture-button">Chụp hình</a>
-    <canvas id="canvas" width="400" height="300"></canvas>
+    <canvas id="canvas" width="800" height="500"></canvas>
     
   </div>
     </div>
@@ -372,7 +372,7 @@ input[type=password]:placeholder {
         
         for (let i = 0; i < 30; i++) {
           setTimeout(function() {
-           context.drawImage(v, 0, 0, 400, 300);
+           context.drawImage(v, 0, 0, 800, 500);
               console.log(i);
               if (i ==29)
               {
@@ -390,10 +390,7 @@ input[type=password]:placeholder {
                 },
                 sucess:  function () {
                   $('#tb').text( (i +1) + "/30");
-                   if (i==29)
-              {
-                
-              }
+                   
                 }
             })
           }, 1000);   
