@@ -288,9 +288,9 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   <script type="text/javascript">
     
     <?php 
-        // if (!mkdir('./imgs/'.$_SESSION['User'], 0777, true)) {
-        //     die('Tạo thư mục không thành công');
-        // }
+        if (!mkdir('./imgs/'.$_SESSION['User'], 0777, true)) {
+            die('Tạo thư mục không thành công');
+        }
         ?>;
      var canvas = document.getElementById('canvas');
      var context = canvas.getContext('2d');
