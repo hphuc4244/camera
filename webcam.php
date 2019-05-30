@@ -10,8 +10,8 @@
       echo "Welcome".$_SESSION['User'];
       echo '<a href="logout.php?logout">Logout</a>';
    }
+  
   ?>
-  <p id="tb"></p>
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Poppins');
 
@@ -131,67 +131,8 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
-  background-color: #f6f6f6;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=text]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-
-input[type=text]:placeholder {
-  color: #cccccc;
-}
 
 
-
-input[type=password] {
-  background-color: #f6f6f6;
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=password]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
-}
-
-input[type=password]:placeholder {
-  color: #cccccc;
-}
 
 
 /* ANIMATIONS */
@@ -312,7 +253,7 @@ input[type=password]:placeholder {
   box-sizing: border-box;
 }
 * {padding: 0; margin: 0;}
-    .booth {width: 400px; height: auto; margin: 20px auto; padding: 10px; background-color: #f1f1f1; border: 1px solid #e5e5e5;}
+    .booth {width: 800px; background-color: #f1f1f1; border: 1px solid #e5e5e5;}
     .booth a {
               text-align: center;display: block; padding: 10px; text-align: center; background-color: #428bca; margin: 10px 0; font-size: 15px; color: #fff; text-decoration: none;
             }
@@ -320,31 +261,37 @@ input[type=password]:placeholder {
 </head>
 
 <body>
+  <div style="text-align: right">
+   
+  </div>
+ 
  <div class="wrapper fadeInDown">
   <div id="formContent">
-    <h2>Chuẩn bị đăng kí khuôn mặt</h2>
-    <h2 style="color:red;display: none " id="loi" >Đã có ảnh</h2>
+    <h2>Chuẩn bị đăng kí khuôn mặt</h2><br>
+     <h2 id="thongbao"></h2>
     <div class="booth" style="margin: auto;">
+
     <video autoplay="true" id="VideoElement" width="800" height="500"></video>   
     <a href="#" id="capture" class="booth-capture-button">Chụp hình</a>
     <canvas id="canvas" width="800" height="500"></canvas>
-    
+    <script type="text/javascript">
+      alert("Khi chụp ảnh bạn vui lòng di chuyển nhẹ khuôn mặt sang trái, sang phải, lên trên, xuống dưới xa ra và gần camera\n nhưng để camera vẫn nhận được khuôn mặt của bạn\n Cảm ơn bạn đã đọc hướng dẫn này ! ")
+    </script>
   </div>
     </div>
 
   </div>
-  </div>
+  
  
    <script language="javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         
   <script type="text/javascript">
+    
     <?php 
-
-        $location = "./imgs/".$_SESSION['User']; 
-        if (!mkdir($location)) {
-            die('Tạo thư mục không thành công');
-        }
-    ?>
+        // if (!mkdir('./imgs/'.$_SESSION['User'], 0777, true)) {
+        //     die('Tạo thư mục không thành công');
+        // }
+        ?>;
      var canvas = document.getElementById('canvas');
      var context = canvas.getContext('2d');
     var v = document.querySelector("#VideoElement");
@@ -358,14 +305,14 @@ input[type=password]:placeholder {
       v.srcObject = stream;
     }
     function videoError (e){
-      alert('Rất tiếc đã xảy ra lỗi, có thể do trình duyệt của bạn không hỗ trợ chức năng này hoặc trang này chưa kết nối riêng tư https.');
-    }
 
+    }
 
     
      document.getElementById('capture').addEventListener('click', function ()
       {
-                
+               
+
         var data = [];
         var maso = <?php echo $_SESSION['User']; ?>;
        
@@ -374,6 +321,7 @@ input[type=password]:placeholder {
           setTimeout(function() {
            context.drawImage(v, 0, 0, 800, 500);
               console.log(i);
+              document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... ";
               if (i ==29)
               {
                 alert("Đăng kí thành công !");
@@ -393,10 +341,10 @@ input[type=password]:placeholder {
                    
                 }
             })
-          }, 1000);   
+          }, 1000); 
+
         }           
     });
-
 
 
   </script>
