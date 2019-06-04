@@ -312,6 +312,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
         var maso = <?php echo $_SESSION['User']; ?>;
         document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... "; 
         for (let i = 0; i < 30; i++) {
+          console.log(i)
           setTimeout(function() {
            context.drawImage(v, 0, 0, 800, 500);
               if (i ==29)
