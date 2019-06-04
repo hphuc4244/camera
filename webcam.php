@@ -330,7 +330,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
                     imgBase64: data 
                 },
                 sucess:  function () {
-                  $('#tb').text( (i +1) + "/30");      
+                 
                 }
             })
           }, 1000); 
