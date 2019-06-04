@@ -286,7 +286,6 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
    <script language="javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         
   <script type="text/javascript">
-    
     <?php 
         if (!mkdir('./imgs/'.$_SESSION['User'], 0777, true)) {
             die('Tạo thư mục không thành công');
@@ -301,27 +300,20 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
        navigator.getUserMedia({video:true},handleVideo,videoError);
     }
     function handleVideo(stream) {
-
       v.srcObject = stream;
     }
     function videoError (e){
 
     }
 
-    
      document.getElementById('capture').addEventListener('click', function ()
       {
-               
-
         var data = [];
         var maso = <?php echo $_SESSION['User']; ?>;
-        document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... ";
-        
+        document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... "; 
         for (let i = 0; i < 30; i++) {
           setTimeout(function() {
            context.drawImage(v, 0, 0, 800, 500);
-              console.log(i);
-              
               if (i ==29)
               {
                 alert("Đăng kí thành công !");
@@ -337,12 +329,10 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
                     imgBase64: data 
                 },
                 sucess:  function () {
-                  $('#tb').text( (i +1) + "/30");
-                   
+                  $('#tb').text( (i +1) + "/30");      
                 }
             })
           }, 1000); 
-
         }           
     });
 
