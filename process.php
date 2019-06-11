@@ -16,7 +16,7 @@
 			// }
 			$sql = "select * from nguoidangky where MaSo = ".$_POST['usr']." and MatKhau = '".$_POST['pass']."'";
 			$result = $con->query($sql);
-			elseif ($result->num_rows > 0)
+			if ($result->num_rows > 0)
 			{
 				
 						$_SESSION['User']=$_POST['usr'];
