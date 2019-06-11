@@ -63,7 +63,7 @@ h2 {
   background: #fff;
   padding: 30px;
   width: 90%;
-  max-width: 800px;
+  max-width: 600px;
   position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -253,7 +253,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   box-sizing: border-box;
 }
 * {padding: 0; margin: 0;}
-    .booth {width: 800px; background-color: #f1f1f1; border: 1px solid #e5e5e5;}
+    .booth {width: 600px; background-color: #f1f1f1; border: 1px solid #e5e5e5;}
     .booth a {
               text-align: center;display: block; padding: 10px; text-align: center; background-color: #428bca; margin: 10px 0; font-size: 15px; color: #fff; text-decoration: none;
             }
@@ -271,9 +271,9 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
      <h2 id="thongbao"></h2>
     <div class="booth" style="margin: auto;">
 
-    <video autoplay="true" id="VideoElement" width="800" height="500"></video>   
+    <video autoplay="true" id="VideoElement" width="600" height="500"></video>   
     <a href="#" id="capture" class="booth-capture-button">Chụp hình</a>
-    <canvas id="canvas" width="800" height="500"></canvas>
+    <canvas id="canvas" width="600" height="500"></canvas>
     <script type="text/javascript">
        alert("Khi chụp ảnh bạn vui lòng di chuyển nhẹ khuôn mặt sang trái, sang phải, lên trên, xuống dưới xa ra và gần camera nhưng để camera vẫn nhận được khuôn mặt của bạn\nSau khi bấm chụp hình vui lòng chờ đến khi hiện thông báo của web \nCảm ơn bạn đã đọc hướng dẫn này ! ")
     </script>
@@ -319,7 +319,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
         
         for (let i = 0; i < 30; i++) {
           setTimeout(function() {
-           context.drawImage(v, 0, 0, 800, 500);
+           context.drawImage(v, 0, 0, 600, 500);
               console.log(i);
               document.getElementById("thongbao").innerHTML = "Đang chụp ảnh xin chờ..... ";
               if (i ==29)
