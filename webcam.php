@@ -341,7 +341,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
                    
                 }
             })
-          }, 1000); 
+          }, 500); 
 
         }           
     });
