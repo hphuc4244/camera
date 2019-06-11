@@ -1,7 +1,4 @@
-<?php
-   
-   $con = mysqli_connect('localhost','root','','qlkhuonmat');
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
