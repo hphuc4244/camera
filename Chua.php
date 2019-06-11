@@ -81,7 +81,7 @@
                 </thead>
                <tbody>
                  <?php
-                   $con = new mysqli('localhost','root','','qlkhuonmat');
+                   $con = new mysqli('localhost','root','123456','qlkhuonmat');
                   $con->set_charset("utf8");
                   
                     $sql ="SELECT * FROM nguoidangky WHERE MaSo NOT IN (SELECT DISTINCT MaTaiKhoan FROM hinh)";

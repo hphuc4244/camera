@@ -81,15 +81,11 @@
                 </thead>
                 <tbody>
                  <?php
-                   $con = new mysqli('localhost','root','','qlkhuonmat');
+
+                   $con = new mysqli('localhost','root','123456','qlkhuonmat');
                   $con->set_charset("utf8");
                    $sql ="SELECT MaSo,HoTen,MaLop FROM nguoidangky";
                    $result = $con->query($sql);
-
-                    $sql1 ="SELECT DISTINCT MaTaiKhoan FROM hinh";
-                   $result1 = $con->query($sql1);
-                  
-                  
                   if(mysqli_num_rows($result) > 0){
                             while ($row = mysqli_fetch_assoc($result)) {
                                 
