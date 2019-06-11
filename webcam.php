@@ -275,7 +275,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
     <a href="#" id="capture" class="booth-capture-button">Chụp hình</a>
     <canvas id="canvas" width="800" height="500"></canvas>
     <script type="text/javascript">
-      alert("Khi chụp ảnh bạn vui lòng di chuyển nhẹ khuôn mặt sang trái, sang phải, lên trên, xuống dưới xa ra và gần camera\n nhưng để camera vẫn nhận được khuôn mặt của bạn\n Cảm ơn bạn đã đọc hướng dẫn này ! ")
+       alert("Khi chụp ảnh bạn vui lòng di chuyển nhẹ khuôn mặt sang trái, sang phải, lên trên, xuống dưới xa ra và gần camera nhưng để camera vẫn nhận được khuôn mặt của bạn\nSau khi bấm chụp hình vui lòng chờ đến khi hiện thông báo của web \nCảm ơn bạn đã đọc hướng dẫn này ! ")
     </script>
   </div>
     </div>
