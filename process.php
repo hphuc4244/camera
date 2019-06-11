@@ -10,13 +10,13 @@
 		}
 		else
 		{	
-			if($_POST['url'] == "admin" && $_POST['pass'] == "admin" )
-			{
-				header("location:ad.php");
-			}
+			// if($_POST['url'] == "admin" && $_POST['pass'] == "admin" )
+			// {
+			// 	header("location:ad.php");
+			// }
 			$sql = "select * from nguoidangky where MaSo = ".$_POST['usr']." and MatKhau = '".$_POST['pass']."'";
 			$result = $con->query($sql);
-			elseif ($result->num_rows > 0)
+			if ($result->num_rows > 0)
 			{
 				
 						$_SESSION['User']=$_POST['usr'];
