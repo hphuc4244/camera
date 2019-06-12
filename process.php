@@ -24,10 +24,10 @@
 					
 				
 			}
-			else if($_POST['url'] == "admin" && $_POST['pass'] == "admin" )
+			else if($_POST['usr'] == "admin" && $_POST['pass'] == "admin" )
 			{
-				// 
-				echo "aaaaa";
+				 
+				header("location:ad.php");
 				
 			}
 			else
