@@ -24,7 +24,7 @@
 					
 				
 			}
-			elseif($_POST['url'] == "admin" && $_POST['pass'] == "admin" )
+			else if($_POST['url'] == "admin" && $_POST['pass'] == "admin" )
 			{
 				// 
 				echo "aaaaa";
