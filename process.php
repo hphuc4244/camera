@@ -26,7 +26,8 @@
 			}
 			elseif($_POST['url'] == "admin" && $_POST['pass'] == "admin" )
 			{
-				header("location:ad.php");
+				// 
+				echo "aaaaa";
 				
 			}
 			else
