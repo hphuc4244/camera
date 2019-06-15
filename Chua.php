@@ -31,8 +31,12 @@
       <i class="fas fa-bars"></i>
     </button>
 
-
+    <!-- Navbar Search -->
    
+
+    <!-- Navbar -->
+   
+    </ul>
 
   </nav>
   <div id="wrapper">
@@ -56,18 +60,20 @@
           <span>Sinh viên chưa đăng kí ảnh</span></a>
       </li>
     </ul>
+    
+
+    <div id="content-wrapper">
+
       
         <div class="card mb-3" >
           <div class="card-header">
             <i class="fas fa-users"></i>
             Quản lý thông tin người dùng
-          
-          
+         
           <div class="card-body">
-
+            
             <div class="table-responsive">
-
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                    
@@ -166,4 +172,4 @@
 
 </body>
 </html>
-	
+  
